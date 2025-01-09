@@ -450,7 +450,7 @@ list = c.fetchall()
 counter = 0
 for tuple in list:
     c.execute(
-        'SELECT username FROM hash_infos WHERE nt_hash = \"' + tuple[0] + '\" AND history_index = -1')
+        'SELECT username_full FROM hash_infos WHERE nt_hash = \"' + tuple[0] + '\" AND history_index = -1')
     usernames = c.fetchall()
     password = tuple[2]
     if password is None:
